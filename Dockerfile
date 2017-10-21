@@ -14,7 +14,7 @@ ARG REPO=https://github.com/Terranex/pyfwi/archive/${BRANCH}.zip
 # xmltodict - parse yr.no response
 #
 RUN apk update \
- && apk add curl unzip py3-astral py3-raven py3-requests py3-xmltodict py3-dateutil py3-urllib3 \
+ && apk add curl unzip py3-astral@testing py3-raven py3-requests py3-xmltodict@testing py3-dateutil py3-urllib3 \
  && pip install --upgrade pip \
  && pip install python3-memcached \
  && curl -o /tmp/pyfwi.zip -fsSL ${REPO} \
